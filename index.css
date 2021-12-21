@@ -1,0 +1,241 @@
+/*Start Main Rules*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150vh;
+}
+
+
+/*End Main Rules*/
+
+.contain {
+    width: 80%;
+    height: 80%;
+    background-color: hsl(217, 54%, 11%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Standard Touch*/
+
+
+/* .main::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(220, 54%, 11%);
+    width: 130%;
+    height: 120%;
+    border-radius: 70px;
+    z-index: 0;
+}
+.main::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(215, 51%, 12%);
+    width: 115%;
+    height: 110%;
+    border-radius: 50px;
+    z-index: 1;
+} */
+
+
+/*Standard Touch*/
+
+.main .container {
+    background-color: hsl(216, 50%, 16%);
+    width: 350px;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 99;
+    /*My Touch*/
+    box-shadow: 0px 0px 20px 2px hsl(213, 50%, 7%);
+    /*My Touch*/
+}
+
+.main .container .pic1 {
+    width: 100%;
+    height: 100%;
+}
+
+.main .container .pic1 img {
+    border-radius: 10px;
+}
+
+.main .container .name {
+    color: #fff;
+    font-size: 20px;
+}
+
+.main .container .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.main .container .grid .part {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main .container .grid .part:first-child {
+    justify-content: flex-start;
+}
+
+.main .container .grid .part:last-child {
+    justify-content: flex-end;
+}
+
+.main .container .grid .part:first-child p {
+    color: hsl(178, 100%, 50%);
+}
+
+.main .container .grid .part p {
+    font-size: 15px;
+}
+
+.main .container .grid .part:first-child .pic {
+    width: 8%;
+    height: 8%;
+}
+
+.main .container .grid .part:last-child .pic {
+    width: 12%;
+    height: 12%;
+}
+
+.main .container .pro {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.main .container .pro::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: hsl(215, 32%, 27%);
+    top: 0;
+    left: 0;
+}
+
+.main .container .pro .pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.main .container .pro p span {
+    color: #fff;
+    text-indent: 3px;
+}
+
+
+/*Start Framwork*/
+
+p {
+    font-size: 18px;
+    line-height: 1.4;
+    justify-content: stretch;
+    align-items: center;
+    display: flex;
+    color: hsl(215, 51%, 70%);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.pic {
+    width: 0;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*End Framework*/
+
+
+/*Start Responsive*/
+
+@media(max-width:768px) {
+    .contain {
+        width: 100%;
+        height: 100%;
+    }
+    .main .container {
+        width: 300px;
+    }
+    .main::after {
+        width: 120%;
+        height: 110%;
+        border-radius: 60px;
+    }
+    .main::before {
+        width: 110%;
+        height: 105%;
+        border-radius: 40px;
+    }
+    .main .container .pro {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .main .container .pro .pic {
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+/*End Responsive*/
